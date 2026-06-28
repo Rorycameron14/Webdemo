@@ -101,16 +101,16 @@ const Contact = () => {
 
         <form onSubmit={handleSubmit} noValidate className="space-y-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <Input label="First name" placeholder="Jane" value={form.first_name} onChange={set('first_name')} error={errors.first_name} />
+            <Input label="First name" placeholder="John" value={form.first_name} onChange={set('first_name')} error={errors.first_name} />
             <Input label="Last name" placeholder="Smith" value={form.last_name} onChange={set('last_name')} error={errors.last_name} />
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <Input label="Email" type="email" placeholder="jane@company.com" value={form.email} onChange={set('email')} error={errors.email} />
+            <Input label="Email" type="email" placeholder="johnsmith@gmail.com" value={form.email} onChange={set('email')} error={errors.email} />
             <Input label="Phone number" type="tel" placeholder="+44 7700 900000" value={form.phone} onChange={set('phone')} error={errors.phone} />
           </div>
 
-          <Input label="Company" placeholder="Acme Ltd" value={form.company} onChange={set('company')} error={errors.company} />
+          <Input label="Company" placeholder="Microsoft" value={form.company} onChange={set('company')} error={errors.company} />
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <Select label="Project type" value={form.project_type} onChange={set('project_type')} error={errors.project_type}>

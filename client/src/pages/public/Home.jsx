@@ -66,6 +66,24 @@ const steps = [
   },
 ];
 
+const portfolio = [
+  {
+    name: 'Royal Burgess Golfing Society',
+    category: 'Web Development · Branding',
+    img: '/uploads/RGBS.png',
+  },
+  {
+    name: 'weareghost',
+    category: 'Graphic Design · UI/UX',
+    img: '/uploads/we_are_ghost_limited_logo.jpg',
+  },
+  {
+    name: "University of Aberdeen Men's Hockey Club",
+    category: 'Web Development · Branding',
+    img: '/uploads/Mens-Hockey.jpg',
+  },
+];
+
 const services = [
   { name: 'Web Development', desc: 'High-performance websites and web applications.' },
   { name: 'Branding', desc: 'Identity systems that make a lasting impression.' },
@@ -255,6 +273,34 @@ const Home = () => (
               </Link>
             ))}
           </div>
+        </div>
+      </div>
+    </section>
+
+    {/* ── Portfolio ── */}
+    <section className="py-24 px-6 bg-gray-50">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <p className="text-xs font-semibold text-purple-600 uppercase tracking-widest mb-3">Our work</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Projects we're proud of</h2>
+          <p className="text-gray-500 max-w-xl mx-auto">A selection of brands and digital experiences we've built for our clients.</p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {portfolio.map((p) => (
+            <div key={p.name} className="group relative bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+              <div className="aspect-video bg-gray-100 overflow-hidden flex items-center justify-center">
+                <img
+                  src={p.img}
+                  alt={p.name}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div className="p-5">
+                <p className="text-xs font-medium text-purple-600 mb-1">{p.category}</p>
+                <h3 className="text-sm font-semibold text-gray-900">{p.name}</h3>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
