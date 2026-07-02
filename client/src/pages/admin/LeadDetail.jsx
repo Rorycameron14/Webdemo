@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
-import { fetchEnquiry, updateEnquiry, deleteEnquiry } from '../../services/api';
+import { fetchEnquiry, updateEnquiry, deleteEnquiry, BACKEND_URL } from '../../services/api';
 import Badge from '../../components/ui/Badge';
 import Button from '../../components/ui/Button';
 import Card, { CardHeader, CardBody } from '../../components/ui/Card';
@@ -138,7 +138,7 @@ const LeadDetail = () => {
               <CardHeader><h2 className="font-semibold text-gray-900 text-sm">Attached file</h2></CardHeader>
               <CardBody>
                 <a
-                  href={enquiry.file_path}
+                  href={BACKEND_URL + enquiry.file_path}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-sm text-purple-700 hover:text-purple-800 font-medium"
