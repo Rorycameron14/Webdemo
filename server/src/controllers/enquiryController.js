@@ -21,8 +21,9 @@ const createEnquiry = async (req, res, next) => {
 
     try {
       await Promise.all([sendClientConfirmation(enquiry), sendAdminNotification(enquiry)]);
+      console.log('Emails sent successfully for enquiry', enquiry.id);
     } catch (emailErr) {
-      console.warn('Email sending failed:', emailErr.message);
+      console.error('Email sending failed:', emailErr.message, emailErr.code, emailErr.response);
     }
 
     res.status(201).json({ success: true, data: enquiry });
