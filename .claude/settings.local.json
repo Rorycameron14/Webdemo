@@ -11,7 +11,8 @@
       "Bash(cp \"c:/Users/roryt/Downloads/rory-dev-116d5-firebase-adminsdk-fbsvc-7f8cc0a318.json\" \"c:/Users/roryt/OneDrive/Desktop/Webdemo/firebase-service-account.json\")",
       "Bash(git add *)",
       "Bash(git commit -m ' *)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "Bash(curl -s -i -X OPTIONS \"https://webdemo-2l9i.onrender.com/api/enquiries\" -H \"Origin: https://webdemo-kqa732vl8-rorycameron14s-projects.vercel.app\" -H \"Access-Control-Request-Method: POST\" --max-time 90)"
     ],
     "additionalDirectories": [
       "c:\\Users\\roryt\\Downloads"
