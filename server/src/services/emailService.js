@@ -1,12 +1,20 @@
-const transporter = require('../config/email');
+const { Resend } = require('resend');
+
+const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
+const FROM = process.env.EMAIL_FROM || 'Rory Dev <onboarding@resend.dev>';
+
+const ensureResend = () => {
+  if (!resend) throw new Error('RESEND_API_KEY is not set');
+};
 
 const sendClientConfirmation = async (enquiry) => {
+  ensureResend();
   const { first_name, last_name, email, project_type } = enquiry;
 
-  await transporter.sendMail({
-    from: `"Rory Dev" <${process.env.SMTP_USER}>`,
+  const { error } = await resend.emails.send({
+    from: FROM,
     to: email,
-    subject: 'We received your project enquiry — Rory Dev',
+    subject: 'We received your project enquiry - Rory Dev',
     html: `
       <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 600px; margin: 0 auto; padding: 40px 20px; background: #ffffff;">
         <div style="margin-bottom: 32px;">
@@ -26,15 +34,18 @@ const sendClientConfirmation = async (enquiry) => {
       </div>
     `,
   });
+
+  if (error) throw new Error(error.message || 'Resend failed (client confirmation)');
 };
 
 const sendAdminNotification = async (enquiry) => {
+  ensureResend();
   const { first_name, last_name, email, phone, company, project_type, budget, project_description } = enquiry;
 
-  await transporter.sendMail({
-    from: `"Rory Dev System" <${process.env.SMTP_USER}>`,
+  const { error } = await resend.emails.send({
+    from: FROM,
     to: process.env.ADMIN_EMAIL,
-    subject: `New enquiry from ${first_name} ${last_name} — ${project_type}`,
+    subject: `New enquiry from ${first_name} ${last_name} - ${project_type}`,
     html: `
       <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 600px; margin: 0 auto; padding: 40px 20px; background: #ffffff;">
         <h2 style="font-size: 20px; font-weight: 600; color: #0f0f0f;">New Project Enquiry</h2>
@@ -56,6 +67,8 @@ const sendAdminNotification = async (enquiry) => {
       </div>
     `,
   });
+
+  if (error) throw new Error(error.message || 'Resend failed (admin notification)');
 };
 
 module.exports = { sendClientConfirmation, sendAdminNotification };
