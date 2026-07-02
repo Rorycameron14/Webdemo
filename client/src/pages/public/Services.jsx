@@ -25,7 +25,7 @@ const services = [
   },
   {
     name: 'Graphic Design',
-    desc: 'Striking visual assets for every format — digital and print. Designed to stop the scroll and start conversations.',
+    desc: 'Striking visual assets for every format, digital and print. Designed to stop the scroll and start conversations.',
     features: ['Social media assets', 'Print collateral', 'Presentation design', 'Infographics', 'Marketing materials'],
     icon: (
       <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">

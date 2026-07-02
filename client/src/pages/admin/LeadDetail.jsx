@@ -12,7 +12,7 @@ const STATUS_LABELS = { new: 'New', contacted: 'Contacted', proposal_sent: 'Prop
 const Field = ({ label, value }) => (
   <div>
     <p className="text-xs font-medium text-gray-400 mb-0.5">{label}</p>
-    <p className="text-sm text-gray-800">{value || '—'}</p>
+    <p className="text-sm text-gray-800">{value || '-'}</p>
   </div>
 );
 

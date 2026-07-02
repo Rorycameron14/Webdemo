@@ -52,7 +52,7 @@ const steps = [
   {
     number: '01',
     title: 'Discovery call',
-    desc: "We start by understanding your goals, audience, and vision. No templates — every project begins with a blank canvas.",
+    desc: "We start by understanding your goals, audience, and vision. No templates, every project begins with a blank canvas.",
   },
   {
     number: '02',
@@ -62,7 +62,7 @@ const steps = [
   {
     number: '03',
     title: 'Launch & grow',
-    desc: "We hand over a fully tested, production-ready product — and stay on as your partner for what comes next.",
+    desc: "We hand over a fully tested, production-ready product and stay on as your partner for what comes next.",
   },
 ];
 
@@ -100,7 +100,7 @@ const testimonials = [
     initials: 'RC',
   },
   {
-    quote: "Fast, professional, and genuinely invested in our success. They didn't just build what we asked for — they understood the brief and made it better.",
+    quote: "Fast, professional, and genuinely invested in our success. They didn't just build what we asked for, they understood the brief and made it better.",
     author: 'Jacques Scott Agnew',
     role: 'Graphic Designer, weareghost',
     initials: 'JS',
@@ -203,7 +203,7 @@ const Home = () => (
         <div className="text-center mb-16">
           <p className="text-xs font-semibold text-purple-600 uppercase tracking-widest mb-3">Why us</p>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Built different, by design</h2>
-          <p className="text-gray-500 max-w-xl mx-auto">We combine craft with strategy to deliver digital work that performs — not just looks good.</p>
+          <p className="text-gray-500 max-w-xl mx-auto">We combine craft with strategy to deliver digital work that performs, not just looks good.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((f) => (
@@ -249,7 +249,7 @@ const Home = () => (
             <p className="text-xs font-semibold text-purple-600 uppercase tracking-widest mb-3">What we offer</p>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Everything you need to grow online</h2>
             <p className="text-gray-500 mb-8 leading-relaxed">
-              From your first logo to a full digital ecosystem — we handle every touchpoint of your brand's online presence.
+              From your first logo to a full digital ecosystem, we handle every touchpoint of your brand's online presence.
             </p>
             <Link to="/services">
               <Button variant="secondary">Explore all services</Button>
@@ -311,7 +311,7 @@ const Home = () => (
         <div className="text-center mb-16">
           <p className="text-xs font-semibold text-purple-400 uppercase tracking-widest mb-3">Testimonials</p>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Trusted by great teams</h2>
-          <p className="text-gray-500">Don't take our word for it — hear from clients who've been there.</p>
+          <p className="text-gray-500">Don't take our word for it, hear from clients who've been there.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {testimonials.map((t) => (

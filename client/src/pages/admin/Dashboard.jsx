@@ -138,7 +138,7 @@ const Dashboard = () => {
             </>
           ) : (
             <div className="py-8 text-center">
-              <p className="text-sm text-gray-400">No leads yet — submit your first enquiry via the contact form.</p>
+              <p className="text-sm text-gray-400">No leads yet. Submit your first enquiry via the contact form.</p>
             </div>
           )}
         </div>
