@@ -8,7 +8,10 @@
       "PowerShell(Start-Process -FilePath \"cmd.exe\" -ArgumentList \"/c cd /d c:\\\\Users\\\\roryt\\\\OneDrive\\\\Desktop\\\\Webdemo\\\\server && node src/index.js 2>&1 > C:\\\\Users\\\\roryt\\\\AppData\\\\Local\\\\Temp\\\\server-err.txt\" -WindowStyle Hidden)",
       "PowerShell(Get-Command psql -ErrorAction SilentlyContinue)",
       "PowerShell(Start-Process -FilePath \"cmd.exe\" -ArgumentList \"/c cd /d c:\\\\Users\\\\roryt\\\\OneDrive\\\\Desktop\\\\Webdemo\\\\server && npm run dev > C:\\\\Users\\\\roryt\\\\AppData\\\\Local\\\\Temp\\\\server-out.txt 2>&1\" -WindowStyle Hidden)",
-      "Bash(cp \"c:/Users/roryt/Downloads/rory-dev-116d5-firebase-adminsdk-fbsvc-7f8cc0a318.json\" \"c:/Users/roryt/OneDrive/Desktop/Webdemo/firebase-service-account.json\")"
+      "Bash(cp \"c:/Users/roryt/Downloads/rory-dev-116d5-firebase-adminsdk-fbsvc-7f8cc0a318.json\" \"c:/Users/roryt/OneDrive/Desktop/Webdemo/firebase-service-account.json\")",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)"
     ],
     "additionalDirectories": [
       "c:\\Users\\roryt\\Downloads"
